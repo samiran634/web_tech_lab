@@ -1,0 +1,19 @@
+.main_container{
+    color:antiquewhite;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+.text_container{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.display_class{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    color:black
+}
