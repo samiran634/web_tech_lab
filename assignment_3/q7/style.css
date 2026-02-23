@@ -1,0 +1,122 @@
+:root {
+            --primary-grad: linear-gradient(135deg, #00ff00 0%, #9deeb2 100%);
+            --accent-color: #00d2ff;
+            --shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* 1. Header with Gradient Background */
+        header {
+            background: var(--primary-grad);
+            color: rgb(8, 12, 248);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        /* 2. Navigation Menu */
+        nav {
+            background: #2d3436;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            /* Transition effect */
+            transition: color 0.3s ease, transform 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+            /* Transform effect */
+            transform: scale(1.1);
+        }
+
+        /* 3. Content Section */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap; /* Makes it responsive */
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 2;
+            background: white;
+            padding: 30px;
+            /* Rounded corners & Shadow effects */
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            min-width: 250px;
+        }
+
+        .club-card {
+            background: #eee;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Transform & Shadow on Hover */
+        .club-card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            background: #fff;
+        }
+
+        .join-btn {
+            background: var(--primary-grad);
+            color: rgb(48, 5, 236);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .join-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* 4. Footer */
+        footer {
+            background: #2d3436;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive Mobile Tweak */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+        }
