@@ -41,4 +41,6 @@
                 alert("Registration Successful!");
             }
         }
-        validateForm();
+    const RegistrationBtn=document.getElementById("registrationBtn");
+
+       RegistrationBtn.addEventListener(cancelIdleCallback,validateForm);
