@@ -1,0 +1,30 @@
+.overlay{
+    display: flex;
+    height: 100vh;
+    align-items: baseline;
+    border: solid;
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    margin-left: 10em;
+}
+.product{
+    margin-top: .3em;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    border: none;
+    padding: 12px;
+    border-radius:8px ;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+    padding: 12px 12px;
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Tommy Hilfiger Men's Solid Regular Fit Shirt",
+    "brand": "Tommy Hilfiger",
+    "tag": "premium casual",
+    "image": "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80",
+    "price": 5599
+  },
+  {
+    "id": 2,
+    "name": "Louis Philippe Men's Solid Casual Shirt",
+    "brand": "Louis Philippe",
+    "tag": "formal casual",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+    "price": 1379
+  },
+  {
+    "id": 3,
+    "name": "Allen Solly Men's Solid Casual Shirt",
+    "brand": "Allen Solly",
+    "tag": "smart casual",
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+    "price": 1649
+  },
+  {
+    "id": 4,
+    "name": "U.S. Polo Assn. Men's Solid Slim Fit Shirt",
+    "brand": "U.S. Polo Assn.",
+    "tag": "classic",
+    "image": "https://images.unsplash.com/photo-1589310243389-96a5483213a8?auto=format&fit=crop&w=800&q=80",
+    "price": 1727
+  },
+  {
+    "id": 5,
+    "name": "Van Heusen Men's Solid Slim Fit Formal Shirt",
+    "brand": "Van Heusen",
+    "tag": "office wear",
+    "image": "https://images.unsplash.com/photo-1604695573706-53170668f6a6?auto=format&fit=crop&w=800&q=80",
+    "price": 1229
+  },
+  {
+    "id": 6,
+    "name": "WROGN Men's Casual Shirt",
+    "brand": "WROGN",
+    "tag": "trendy",
+    "image": "https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?auto=format&fit=crop&w=800&q=80",
+    "price": 1299
+  }
+]

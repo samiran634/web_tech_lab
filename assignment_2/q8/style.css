@@ -1,0 +1,66 @@
+:root {
+  --carousel-height: 40px; /* Adjust based on your text size */
+  --items-count: 8;        /* Number of unique items */
+}
+.overlay{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    margin-left: 10em;
+      height: var(--carousel-height);
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+}
+.button{
+    border: none;
+    padding: 12px;
+    border-radius:8px ;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+    padding: 12px 12px;
+    margin-top: 0.5em;
+}
+
+.carouselList {
+  display: flex;
+  flex-direction: column;
+  animation: slide-up 9s ease-in-out infinite; /* Total duration: duration_per_item * total_items */
+}
+
+.carouselItem {
+  height: var(--carousel-height);
+  line-height: var(--carousel-height);
+  padding: 0 15px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/* Pause on hover to allow users to read */
+.mainContainer:hover .carousel-list {
+  animation-play-state: paused;
+}
+@keyframes slide-up {
+  /* 0% to 25%: Item 1 stays visible */
+  0%, 25% { transform: translateY(0); }
+  
+  /* 33% to 58%: Slide to Item 2 */
+  33%, 58% { transform: translateY(calc(-1 * var(--carousel-height))); }
+  
+  /* 66% to 91%: Slide to Item 3 */
+  66%, 91% { transform: translateY(calc(-2 * var(--carousel-height))); }
+  
+  /* 100%: Jump to the duplicated first item to reset the loop */
+  100% { transform: translateY(calc(-3 * var(--carousel-height))); }
+}

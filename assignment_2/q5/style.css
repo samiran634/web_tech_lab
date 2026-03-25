@@ -1,0 +1,69 @@
+.overlay{
+    display: flex;
+    height: 100vh;
+    align-items: baseline;
+    border: solid;
+    background-image: url('./assetes/clock.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    margin-left: 10em;
+}
+.timeShowCase{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    flex-direction: row;
+    margin: auto 3em;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+
+}
+.button{
+    border: none;
+    padding: 12px;
+    border-radius:8px ;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+    padding: 12px 12px;
+    margin: 2px;
+}
+.disable{
+    pointer-events: none;
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5em;
+}
+.hour{
+    border: dashed;
+    padding: 1em;
+   
+}
+.minits{
+    border: dashed;
+    padding: 1em;
+    margin-right:1em ;
+    margin-left: 1em;
+}
+.secs{
+    border: dashed;
+    padding: 1em;
+}

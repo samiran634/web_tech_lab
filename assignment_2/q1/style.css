@@ -1,0 +1,48 @@
+body {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+  display: flex;
+}
+
+#upperLayer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+}
+
+#main-container {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.taskDisplayer{
+    display: flex;
+    width:80%;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+.task_done{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.hidden{
+  display: none;
+}
+.line{
+  position: absolute;
+
+      border: none; /* Removes default browser border */
+  height: 2px; /* Sets the line thickness */
+  background-color: #000; /* Sets the line color */
+  width: 15%;
+
+}

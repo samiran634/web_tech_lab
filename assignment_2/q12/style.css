@@ -1,0 +1,64 @@
+.overlay{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+}
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    margin-left: 10em;
+    gap: 15px;
+}
+.cards{
+    display: grid;
+    
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+.hidden{
+    display: none;
+}
+.button{
+    border: none;
+    padding: 12px;
+    border-radius:8px ;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+    padding: 12px 12px;
+    margin-top: 0.5em;
+}
+.large-input-box {
+  width: 400px;  /* or a percentage, e.g., 100% */
+  height: 200px;
+  font-size: 16px;
+  padding: 10px;
+  align-items: baseline;
+  justify-items: baseline;
+}
+.wordsInput{
+    display: flex;
+    flex-direction: column;
+}
+.wordsDisplay{
+    border: solid;
+    box-shadow: blue;
+    font-size: large;
+    padding: 8px;
+
+}
+.clxbutton{
+     border: none;
+    padding: 12px;
+    border-radius:8px ;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 20%;
+    right:15%;
+}
