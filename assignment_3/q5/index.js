@@ -43,4 +43,4 @@
         }
     const RegistrationBtn=document.getElementById("registrationBtn");
 
-       RegistrationBtn.addEventListener(cancelIdleCallback,validateForm);
+       RegistrationBtn.addEventListener('click',validateForm);

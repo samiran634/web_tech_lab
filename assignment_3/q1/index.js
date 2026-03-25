@@ -1,7 +1,6 @@
-let main_container=document.querySelector(".main_container")
-let text_container=document.querySelector(".text_container")
 
-let btn=document.querySelector(".submit_text");
+
+let btn=document.querySelector(".button");
 function check(num){
     if (!/^\d+$/.test(num)) {
         alert("Please enter a valid number.");
@@ -45,7 +44,7 @@ function check(num){
 
 }
 btn.addEventListener("click",()=>{
-    let num=document.querySelector(".text_input_container").value;
+    let num=document.querySelector(".midInputBox").value;
     console.log(num);
     let text=check(num);
     try{
@@ -53,7 +52,7 @@ btn.addEventListener("click",()=>{
         if(text===undefined)throw "text is undefinded"
         display_box.innerHTML=text;
         display_box.setAttribute("class","display_class");
-        document.body.appendChild(display_box);
+        document.querySelector('.textDisplay').appendChild(display_box);
 
     }catch(e){
         alert(e);

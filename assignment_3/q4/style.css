@@ -1,0 +1,34 @@
+  body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 20px;
+        color: black;
+    }
+    .header-container {
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+    .header-container strong {
+        font-size: 1.1em;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        vertical-align: middle;
+    }
+    th {
+        font-weight: bold;
+    }
+    .break-col {
+        font-weight: bold;
+        font-style: italic;
+        width: 40px;
+    }
+    .bold-text {
+        font-weight: bold;
+    }

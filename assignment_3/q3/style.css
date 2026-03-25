@@ -74,3 +74,20 @@
   margin: 4px 4px 0 0;
   border-radius: 4px;
 }
+
+.button{
+    border: none;
+    padding: 12px;
+    border-radius:8px ;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+    padding: 12px 12px;
+    margin: 2px;
+    background-color: rgb(127, 116, 155);
+    color: white;
+}
+.button:hover{
+  color: aquamarine;
+  background-color: rgb(89, 87, 142);
+}
