@@ -1,63 +1,47 @@
-const addBtn=document.querySelector(".add_item");
-const accumulateBtn=document.querySelector(".total");
-const retriveBtn=document.querySelector(".last5");
-const popUp=document.querySelector("#popUp")
-const popUpContent=document.querySelector(".content");
-const mainContainer=document.querySelector(".main-container")
+let home=document.querySelector(".home");
+let cart=document.querySelector("cart");
 
-const data=localStorage.getItem("expenceArray") ?? [];
-addBtn.addEventListener("click",()=>{
-    popUp.classList.remove("hidden");
-     popUp.classList.add("modal");
-     mainContainer.classList.add("hidden");
-popUpContent.innerHTML = `
-  <form action="/submit" method="POST">
-    <input type="text" name="Expence" class="ExpanceInput" placeholder="Write Your Expences">
-    <input type="number" name="Amount" class="ExpenceAmount" placeholder="how much did you investe?"
-    <button type="submit" class="submitbtn">Add Up</button>
-  </form>
-`;
-});
-document.querySelector(".submitbtn").addEventListener("click",()=>{
-    const newExpence={
-        "name":document.querySelector(".ExpanceInput").value,
-        "amount":document.querySelector(".ExpenceAmount").value
-    }
-    localStorage.setItem('expenceArray',[...data,newExpence]);
-});
 
-accumulateBtn.addEventListener("click",()=>{
-    popUp.classList.remove("hidden");
-    popUp.classList.add("modal");
-    mainContainer.classList.add("hidden");
-    let total=0;
-    data.map((e)=>{
-        total+=e.amount
-    });
-    popUpContent.innerHTML=`<div>${total}</div>`
+// cards container
+const cardsContainer = document.querySelector(".cards_container");
 
-});
+const products = [
+  {
+    title: "Cozy Shirt",
+    desc: "Soft cotton, perfect for daily wear",
+    img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    tags: ["Cotton", "Casual"]
+  },
+  {
+    title: "Denim Jacket",
+    desc: "Classic style with modern comfort",
+    img: "https://images.unsplash.com/photo-1585386959984-a4155221f198",
+    tags: ["Denim", "Winter"]
+  },
+  {
+    title: "Summer Hoodie",
+    desc: "Lightweight and breathable",
+    img: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf",
+    tags: ["Hoodie", "Summer"]
+  }
+];
 
-retriveBtn.addEventListener("click",()=>{
-    popUp.classList.remove("hidden");
-     popUp.classList.add("modal");
-     mainContainer.classList.add("hidden");
-     const last5=data.slice(-5);
-     if(last5.length ===0){
-        popUpContent.innerHTML=`<div>add some expences first</div>`;
-     }
-     last5.map((e)=>{
-        popUpContent.innerHTML=`
-        <div>${e.name}</div>
-        <div>${e.name}</div>
-        `
-     })
+products.forEach(item => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  card.innerHTML = `
+    <img src="${item.img}" alt="${item.title}">
+    <div class="card_contains">
+      <h1>${item.title}</h1>
+      <p>${item.desc}</p>
+      <div class="tags">
+        ${item.tags.map(tag => `<span>${tag}</span>`).join("")}
+      </div>
+    </div>
+  `;
+
+  cardsContainer.appendChild(card);
 });
 
-
-document.querySelector(".cross").addEventListener("click",()=>{
-    popUp.classList.add("hidden");
-     popUp.classList.remove("modal");
-     mainContainer.classList.remove("hidden");
-    popUpContent.innerHTML="";
-})
+cardsContainer.addEventListener();

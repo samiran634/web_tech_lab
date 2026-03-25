@@ -1,8 +1,9 @@
-    .overlay{display: flex;
+.overlay{
+    display: flex;
     height: 100vh;
-    align-items: baseline;
+    justify-content: center;
+    align-items: center;
     border: solid;
-
 }
 .mainContainer{
     display: flex;
@@ -20,7 +21,5 @@
     font-size: 16px;
     transition: 0.5s;
     padding: 12px 12px;
-    margin: 2px;
-    background-color: green;
-    color: white;
+    margin-top: 0.5em;
 }

@@ -1,8 +1,8 @@
-    .overlay{display: flex;
+.overlay{
+    display: flex;
     height: 100vh;
     align-items: baseline;
     border: solid;
-
 }
 .mainContainer{
     display: flex;
@@ -12,6 +12,13 @@
     padding: 2em;
     margin-left: 10em;
 }
+.product{
+    margin-top: .3em;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .button{
     border: none;
     padding: 12px;
@@ -20,7 +27,4 @@
     font-size: 16px;
     transition: 0.5s;
     padding: 12px 12px;
-    margin: 2px;
-    background-color: green;
-    color: white;
 }

@@ -1,59 +1,46 @@
-const startBtn=document.querySelector('#start');
-const stopBtn=document.querySelector('#stop');
-const restartBtn=document.querySelector("#restart");
-const timeShowCase=document.querySelector('.timeShowCase');
-stopBtn.disabled=true;
-restartBtn.disabled=true;
+  function validateForm() {
+            const fname = document.getElementById('firstName').value.trim();
+            const lname = document.getElementById('lastName').value.trim();
+            const pass = document.getElementById('password').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const address = document.getElementById('address').value.trim();
 
-function updateText(hour,minits,secs){
-  document.querySelector('.hour').innerText=`${hour}`;
-  document.querySelector('.minits').innerText=`${minits}`;
-  document.querySelector('.secs').innerText=`${secs}`;
-}
-updateText(0,0,0);
-let intervalId;
+            document.querySelectorAll('.error').forEach(el => el.innerText = "");
 
-startBtn.addEventListener('click',()=>{
-    let h=Number(document.querySelector('.hour').innerText);
-    let m=Number(document.querySelector('.minits').innerText);
-    let s=Number(document.querySelector('.secs').innerText);
-    startBtn.disabled=true;
-    stopBtn.disabled=false;
-    restartBtn.disabled=false;
-   
-    intervalId=setInterval(()=>{
-        s++;
-        if(s>60){
-            s=0;
-            m++;
-            if(m>60){
-                m=0;
-                h++;
+            let isValid = true;
+            const nameRegex = /^[A-Za-z]+$/;
+            if (fname.length < 6 || !nameRegex.test(fname)) {
+                document.getElementById('fnameError').innerText = "Must be at least 6 alphabets.";
+                isValid = false;
+            }
+            if (pass.length < 6) {
+                document.getElementById('passError').innerText = "Password must be at least 6 characters.";
+                isValid = false;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').innerText = "Enter a valid email (e.g., name@domain.com).";
+                isValid = false;
+            }
+            const mobileRegex = /^[0-9]{10}$/;
+            if (!mobileRegex.test(mobile)) {
+                document.getElementById('mobileError').innerText = "Must contain exactly 10 digits.";
+                isValid = false;
+            }
+            if (lname === "") {
+                document.getElementById('lnameError').innerText = "Last Name cannot be empty.";
+                isValid = false;
+            }
+            if (address === "") {
+                document.getElementById('addrError').innerText = "Address cannot be empty.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Registration Successful!");
             }
         }
-        updateText(h,m,s);
-    },1000);
-})
+    const RegistrationBtn=document.getElementById("registrationBtn");
 
-
-stopBtn.addEventListener("click",()=>{
-    if(!intervalId)return -1;
-    clearInterval(intervalId);
-    intervalId=null;
-    startBtn.disabled=false;
-    startBtn.innerText='Resume';
-    stopBtn.disabled=true;
-})
-
-
-restartBtn.addEventListener("click",()=>{
-    if(intervalId){
-        clearInterval(intervalId);
-        intervalId=null;
-    }
-    updateText(0,0,0);
-    restartBtn.disabled=true;
-    startBtn.disabled=false;
-    stopBtn.disabled=true;
-});
-
+       RegistrationBtn.addEventListener(cancelIdleCallback,validateForm);
