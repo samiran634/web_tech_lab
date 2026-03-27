@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Text Box Input Validation</title> 
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body> 
+ 
+    <div class="overlay">
+        <div class="mainContainer">
+             <form id="myForm"> 
+        <label for="myInput">Enter something:</label> 
+        <input type="text" id="myInput" name="myInput"> 
+        <button type="submit" class="button">Submit</button> 
+    </form> 
+     
+    <p id="warningMessage">Please fill out this field!</p>
+        </div>
+    </div>
+    
+ 
+    <script> 
+        const form = document.getElementById('myForm'); 
+        const inputField = document.getElementById('myInput'); 
+        const warningMessage = document.getElementById('warningMessage'); 
+ 
+        form.addEventListener('submit', function(event) { 
+            event.preventDefault(); 
+            if (inputField.value.trim() === '') { 
+                warningMessage.style.display = 'block'; 
+            } else { 
+                warningMessage.style.display = 'none'; 
+                alert("Form submitted!"); 
+            } 
+        }); 
+    </script> 
+ 
+</body> 
+</html>

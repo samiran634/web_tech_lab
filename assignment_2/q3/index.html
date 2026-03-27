@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Button Click Counter</title> 
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body> 
+    <div class="overlay">
+        <div class="mainContainer">
+             <h2>Button Click Counter</h2> 
+ 
+    <button onclick="countClick()" class="button">Click Me</button> 
+ 
+    <p>Button clicked <span id="count">0</span> times</p> 
+        </div>
+    </div>
+   
+ 
+    <script> 
+        var clicks = 0; 
+ 
+        function countClick() { 
+            clicks++; 
+            document.getElementById("count").innerText = clicks; 
+        } 
+    </script> 
+ 
+</body> 
+</html>

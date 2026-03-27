@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Show/Hide Paragraph</title> 
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body> 
+ 
+    <div class="overlay">
+        <div class="mainContainer">
+            <button id="toggleButton" class="button">Show Paragraph</button> 
+    <p id="myParagraph" class="hidden">This is the paragraph that can be shown or hidden. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cumque illo inventore corporis ut nisi rerum qui, doloribus recusandae hic. Debitis error vitae impedit corporis expedita perspiciatis, reprehenderit libero a.</p> 
+ 
+        </div>
+    </div>
+    
+    <script> 
+        const button = document.getElementById('toggleButton'); 
+        const paragraph = document.getElementById('myParagraph'); 
+ 
+        button.addEventListener('click', function() { 
+            if (paragraph.classList.contains("hidden")) {
+                paragraph.classList.remove ('hidden');
+                paragraph.classList.add('myParagraph') 
+                button.textContent = 'Show Paragraph'; // Change button text 
+               
+            } else { 
+                 paragraph.classList.remove('myParagraph') 
+                paragraph.classList.add ('hidden'); 
+                button.textContent = 'Hide Paragraph'; // Change button text 
+            } 
+        }); 
+    </script> 
+ 
+</body> 
+</html>

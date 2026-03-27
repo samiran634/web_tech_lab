@@ -1,0 +1,37 @@
+    .overlay{display: flex;
+    height: 100vh;
+    align-items: baseline;
+    border: solid;
+
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    margin-left: 10em;
+}
+.button{
+    border: none;
+    padding: 12px;
+    border-radius:8px ;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+    padding: 12px 12px;
+    margin: 2px;
+    background-color: green;
+    color: white;
+}
+.hidden{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+#myParagraph{
+    border: solid;
+    color:blue;
+    padding: 8px;
+}

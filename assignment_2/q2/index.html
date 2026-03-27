@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Square and Cube</title> 
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body> 
+    <div class="overlay">
+        <div class="mainContainer">
+            <h2>Square and Cube Calculator</h2> 
+ 
+    <input type="number" id="num" placeholder="Enter a number"> 
+    <button onclick="calculate()" class="button">Calculate</button> 
+ 
+    <div id="output">
+        <p id="square"></p>
+        <p id="cube"></p>
+    </div> 
+ 
+        </div>
+    </div>
+    
+    <script> 
+        function calculate() { 
+            var n = document.getElementById("num").value; 
+            var output=document.getElementById('output');
+            var squareP = document.getElementById("square")
+            var cubeP=document.getElementById('cube'); 
+            
+            if (n === "") { 
+                alert("please enter a number") ; 
+                return; 
+            } 
+            
+            var square = n * n; 
+            var cube = n * n * n; 
+            console.log(square,cube);
+            squareP.innerText = "Square: "+ square 
+            cubeP.innerText=  "Cube: "+cube; 
+        } 
+    </script> 
+ 
+</body> 
+</html> 

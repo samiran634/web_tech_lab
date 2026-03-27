@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Toggle Text and Button</title> 
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body> 
+    <div class="overlay">
+        <div class="mainContainer">
+<p id="myParagraph">This is the first text.</p> 
+    <button id="toggleButton" class="button"> 
+ Text and Color</button> 
+        </div>
+    </div>
+ 
+    
+ 
+    <script> 
+        const button = document.getElementById('toggleButton'); 
+        const paragraph = document.getElementById('myParagraph'); 
+ 
+        let isToggled = true; 
+        paragraph.style.color = "green"; 
+        button.textContent = "Change Text and Color"; 
+        button.style.backgroundColor = "lightgreen";  
+        button.addEventListener('click', function() { 
+            if (isToggled) { 
+                paragraph.textContent = "This is the second text."; 
+                paragraph.style.color = "blue"; 
+                button.textContent = "Revert Text and Color"; 
+                button.style.backgroundColor = "lightblue"; 
+            } else { 
+                paragraph.textContent = "This is the first text."; 
+                paragraph.style.color = "green"; 
+                button.textContent = "Change Text and Color"; 
+                button.style.backgroundColor = "lightgreen";  
+            } 
+            isToggled = !isToggled; 
+        }); 
+    </script> 
+ 
+</body> 
+</html> 

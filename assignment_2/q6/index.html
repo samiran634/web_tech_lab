@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Marks Result</title> 
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body> 
+ 
+    <div class="overlay">
+        <div class="mainContainer">
+            <h2>Student Result</h2> 
+ 
+    <input type="number" id="m1" placeholder="Subject 1 Marks"><br><br> 
+    <input type="number" id="m2" placeholder="Subject 2 Marks"><br><br> 
+    <input type="number" id="m3" placeholder="Subject 3 Marks"><br><br> 
+ 
+    <button onclick="calculateResult()" class="button">Calculate</button> 
+ 
+    <p id="output"></p> 
+ 
+        </div>
+    </div>
+    
+    <script> 
+        function calculateResult() { 
+            var m1 = document.getElementById("m1").value; 
+            var m2 = document.getElementById("m2").value; 
+            var m3 = document.getElementById("m3").value; 
+ 
+            if (m1 === "" || m2 === "" || m3 === "") { 
+                alert("Please enter marks for all three subjects"); 
+                return; 
+            } 
+ 
+            m1 = Number(m1); 
+            m2 = Number(m2); 
+            m3 = Number(m3); 
+ 
+            if (m1 < 0 || m2 < 0 || m3 < 0) { 
+                alert("Marks cannot be negative"); 
+                return; 
+            } 
+ 
+            if (m1 > 100 || m2 > 100 || m3 > 100) { 
+                alert("Marks cannot be greater than 100"); 
+                return; 
+            } 
+ 
+            var total = m1 + m2 + m3; 
+            var average = total / 3; 
+            var result = (m1 >= 40 && m2 >= 40 && m3 >= 40) ? "Pass" : "Fail"; 
+ 
+            document.getElementById("output").innerText = 
+                "Total: " + total + 
+                " | Average: " + average + 
+                " | Result: " + result; 
+        } 
+    </script> 
+ 
+</body> 
+</html> 
